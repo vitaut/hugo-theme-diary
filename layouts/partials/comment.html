@@ -1,3 +1,4 @@
+{{ if not .Params.noComment }}
 {{ if .Site.Params.disqusShortname }}
 <div id="disqus_thread"></div>
 <script>
@@ -97,4 +98,5 @@ twikoo.init({
         crossorigin="{{ .Site.Params.giscus.crossorigin}}"
         async>
 </script>
+{{ end }}
 {{ end }}
