@@ -467,6 +467,11 @@ a {
       color: darken($color-accent, $nav-item-active-color-darken);
     }
   }
+  .social-icons {
+    .social-icon {
+      padding: 8px 28px 8px 30px;
+    }
+  }
   .nav-link-list {
     flex-grow: 1;
     .nav-link-item {
@@ -1106,4 +1111,17 @@ mjx-container {
   .tag {
     margin: 10px;
   }
+}
+
+.social-icons {
+  padding: 12px 0;
+}
+
+.social-icons a:not(:last-of-type) {
+  margin-inline-end: 12px;
+}
+
+.social-icons a svg {
+  height: 26px;
+  width: 26px;
 }
