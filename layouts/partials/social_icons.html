@@ -1,7 +1,6 @@
 <div class="social-icons">
     {{- range . }}
     <a href="{{ trim .url " " | safeURL }}"
-       class="social-icon"
        target="_blank" rel="noopener noreferrer me"
        title="{{ (.title | default .name) | title }}">
         {{ partial "svg.html" . }}
