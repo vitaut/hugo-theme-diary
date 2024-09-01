@@ -15,6 +15,11 @@
 <meta name="renderer" content="webkit">
 <meta name="theme-color" content="#ffffff">
 
+<!-- rss feed -->
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
 <!-- open-graph -->
 {{if .Site.Params.enableOpenGraph}}
 {{ template "_internal/opengraph.html" . }}
